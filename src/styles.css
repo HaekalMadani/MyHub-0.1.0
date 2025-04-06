@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: 1fr 9fr;
+    min-height: 100vh;
+}
+
+.header{
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    background-color: rgb(44, 141, 64);
+    color: white;
+}
+
+.logo{
+    font-family: 'Bungee', sans-serif;
+    align-self: center;
+    padding: 10px;
+}
+
+nav{
+    align-items: center;
+    justify-content: center;
+}
