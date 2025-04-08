@@ -11,7 +11,7 @@
 
 .header{
     display: grid;
-    grid-template-columns: 1fr 6fr;
+    grid-template-columns: 1fr auto;
     background-color: rgb(44, 141, 64);
     color: white;
 }
@@ -24,5 +24,9 @@
 
 nav{
     align-items: center;
-    justify-content: center;
+    padding: 10px 20px;
+}
+
+.nav button{
+    align-self: center;
 }
