@@ -1,0 +1,53 @@
+.subhead h4 {
+    font-weight: bold;
+}
+
+.schedule-container {
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 20px;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.schedule-table th, .schedule-table td {
+    border: 1px solid rgb(44, 141, 64);
+    padding: 12px;
+    text-align: center;
+}
+
+.schedule-table th {
+    color: white;
+    background-color: rgb(44, 141, 64);
+    font-weight: bold;
+}
+
+.schedule-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.taken {
+    background-color: #f0f0f0; 
+}
+
+.taken.active {
+    background-color: rgb(48, 100, 55);
+    color: white;
+    
+}
+
+.taken.active:hover {
+    background-color: rgba(48, 97, 55, 0.836);
+    
+}
+
+.periodcell{
+    background-color: rgb(44, 141, 64);
+    color: white;
+}
