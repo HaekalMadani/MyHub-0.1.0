@@ -1,3 +1,7 @@
+import { projectDialog } from './func';
+
+export {projectDialog} from './func.js'
+
 export default () => {
     const content = document.querySelector(".content");
   
@@ -15,6 +19,7 @@ export default () => {
     subhead.appendChild(subheadtext);
   
     const project2 = document.createElement("div");
+    project2.classList.add('card-container')
     subhead.insertAdjacentElement("afterend", project2);
   
     let projectcards = document.createElement("div");
@@ -25,7 +30,42 @@ export default () => {
   
     project2.appendChild(projectcards);
     projectcards.appendChild(plus);
-  
+
+    //-----------------------util ----------------------------//
+
+    const util = document.createElement("div")
+    util.classList.add('util')
+
+    const todo = document.createElement("div");
+    todo.classList.add('todo');
+
+    let subhead2 = document.createElement("div");
+    subhead2.classList.add("subhead");
+
+    let subheadtext2 = document.createElement("h4");
+    subheadtext2.textContent = "To-Do-List";
+
+    const list = document.createElement('div');
+    list.classList.add('list')
+
+    let addlist = document.createElement("div");
+    addlist.classList.add("add-list");
+
+    const addbutton = document.createElement('button');
+    addbutton.classList.add("addbutton")
+    addbutton.textContent = "Add To-Do"
+
+    projects.insertAdjacentElement("afterend", util);
+    util.appendChild(todo);
+    todo.appendChild(subhead2);
+    subhead2.appendChild(subheadtext2);
+    subhead2.insertAdjacentElement('afterend', list)
+    list.appendChild(addlist);
+    addlist.appendChild(addbutton)
+
+    projectDialog();
+
+
     return projects; 
   };
   
