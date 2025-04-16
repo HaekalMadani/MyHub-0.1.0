@@ -174,14 +174,18 @@ input[type="text"].sbar:focus{
     display: grid;
     grid-template-columns: minmax(250px, 4fr) 1fr;
     gap: 20px;
-    padding: 10px;
+
+    
   }
 
 .content .util{
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr;
 }
 
+.todo{
+    padding: 20px;
+}
 .project-container {
     width: 100%;
     padding: 20px;

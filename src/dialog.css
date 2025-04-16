@@ -1,0 +1,10 @@
+dialog{
+    display: flex;
+    height: 40vh;
+    justify-content: flex-end;
+
+}
+
+dialog input[type="text"]{
+    margin-left: auto;
+}
