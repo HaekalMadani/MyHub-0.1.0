@@ -1,4 +1,5 @@
-import { projectDialog } from './func';
+import { projectDialog } from './func.js';
+import { todoDialog } from './func.js';
 
 export {projectDialog} from './func.js'
 
@@ -64,6 +65,7 @@ export default () => {
     addlist.appendChild(addbutton)
 
     projectDialog();
+    todoDialog();
 
 
     return projects; 

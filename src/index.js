@@ -5,6 +5,10 @@ import projects from "./project.js";
 import loadSchedule from "./timetable.js";
 import {showFlexTabs, showGridTab} from "./func.js";
 
+// Default page (soon to be home page if u get up yo ass)
+showGridTab();
+projects();
+
 const tabs = document.querySelectorAll(".tab")
 
 tabs.forEach(tab => {
