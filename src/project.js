@@ -14,6 +14,15 @@ export default () => {
   
     let subheadtext = document.createElement("h4");
     subheadtext.textContent = "My Projects";
+
+    //----------------------DEV----------------------------//
+    let devbutton = document.createElement('button');
+    devbutton.classList.add("devbtn");
+    devbutton.textContent = "delete hist. (dev)"
+    
+
+    subhead.appendChild(devbutton);
+    //----------------------------------------------------//
   
     content.appendChild(projects);
     projects.appendChild(subhead);
@@ -21,6 +30,9 @@ export default () => {
   
     const project2 = document.createElement("div");
     project2.classList.add('card-container')
+
+
+    
     subhead.insertAdjacentElement("afterend", project2);
   
     let projectcards = document.createElement("div");
@@ -31,6 +43,19 @@ export default () => {
   
     project2.appendChild(projectcards);
     projectcards.appendChild(plus);
+
+      // Load from localStorage and render
+    const savedProjects = JSON.parse(localStorage.getItem('projects')) || [];
+
+    savedProjects.forEach((proj) => {
+    const newCard = document.createElement('div');
+    newCard.classList.add("project-cards");
+    newCard.innerHTML = `
+      <h3>${proj.name}</h3>
+      <p>${proj.type}</p>
+     `;
+    project2.insertBefore(newCard, projectcards); // insert before the "+" card
+    });
 
     //-----------------------util ----------------------------//
 
@@ -66,7 +91,6 @@ export default () => {
 
     projectDialog();
     todoDialog();
-
 
     return projects; 
   };

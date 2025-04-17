@@ -37,18 +37,18 @@ function projectDialog() {
 
     <div class="input">
       <select id="projectType" name="projectType" required>
-      <option value="web">Web Development</option>
-      <option value="mobile">Mobile Development</option>
-      <option value="data">Data Science</option>
+      <option value="Web Development">Web Development</option>
+      <option value="Mobile Development">Mobile Development</option>
+      <option value="Data Science">Data Science</option>
     </select>
     </div>
 
     <div class="label">
-    <label for="ProjectDesc">Project Description: </label>
+    <label for="projectDesc">Project Description: </label>
     </div>
         
     <div class="input">
-    <input type="text" id="ProjectDesc" name="ProjectDesc" required>
+    <input type="text" id="projectDesc" name="projectDesc" required>
     </div>
 
     <div class="label">
@@ -81,14 +81,34 @@ function projectDialog() {
       e.preventDefault();
 
       const projectName = createForm.querySelector('#projectName').value;
+      const projectType = createForm.querySelector('#projectType').value;
+      const projectDesc = createForm.querySelector('#projectDesc').value;
+      const githubLink = createForm.querySelector('#githubLink').value;
+
+      const newProject = {
+        name: projectName,
+        type: projectType,
+        description: projectDesc,
+        github: githubLink
+      }
+
+      let projects = JSON.parse(localStorage.getItem('projects')) || [];
+      
+      projects.push(newProject);
+      console.log("New Project:", newProject);
+      localStorage.setItem('projects', JSON.stringify(projects));
 
       const newCard = document.createElement('div');
       newCard.classList.add("project-cards");
-      newCard.textContent = projectName;
+      newCard.innerHTML = `
+        <h3>${projectName}</h3>
+        <p>${projectType}</p>
+        `;
 
       const cardContainer = activator.parentElement;
       cardContainer.insertBefore(newCard, activator);
 
+      console.log("Form submitted");
       createDialog.close();
       createDialog.remove();
     })

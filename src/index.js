@@ -9,6 +9,16 @@ import {showFlexTabs, showGridTab} from "./func.js";
 showGridTab();
 projects();
 
+// DEV BUTTON ------------------------
+const dev = document.querySelector(".devbtn")
+
+dev.addEventListener("click", () =>{
+    localStorage.removeItem('projects');
+    console.log("Local Storage Removed");  
+    location.reload(); 
+})
+// -----------------------------------
+
 const tabs = document.querySelectorAll(".tab")
 
 tabs.forEach(tab => {

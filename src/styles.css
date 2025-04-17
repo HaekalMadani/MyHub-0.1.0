@@ -193,8 +193,8 @@ input[type="text"].sbar:focus{
 
 .card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, min-content));
+    gap: 30px;
     width: 100%;
     max-width: 100%; 
     box-sizing: border-box;
@@ -202,14 +202,31 @@ input[type="text"].sbar:focus{
 
 .project-cards{
     background-color: white;
-    height: 70px;
-    width: 200px;
-    padding: 40px 25px;
+    height: 8.7rem;
+    width: 15rem;
+    padding: 5px;
     border-left: rgb(44, 141, 64) 9px solid;
     border-radius: 5px;
     box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
     display: grid;
-    grid-template-rows: min-content min-content 1fr;
+    grid-template-rows: 2fr 1fr;
+}
+
+.project-cards h3
+{
+    padding-left: 10px;
+    align-self: end;
+    margin: 0;
+}
+
+.project-cards p{
+    background-color: rgba(44, 141, 63, 0.815);
+    color: white;
+    width: 10rem;
+    border-radius: 20px;
+    padding: 10px;
+
+    align-self: start;
 }
 
 .add-project-cards{
