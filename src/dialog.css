@@ -1,10 +1,69 @@
 dialog{
-    display: flex;
-    height: 40vh;
-    justify-content: flex-end;
+    border: 5px solid rgba(81, 139, 93, 0.219);
+    border-radius: 10px;
+    width: 20rem;
+    padding: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+form{
+    display: grid;
+    grid-template-rows: repeat(10, minmax(min-content, .4fr ));
+
 
 }
 
-dialog input[type="text"]{
-    margin-left: auto;
+form #title {
+    text-align: center;
+    border-bottom: rgb(44, 141, 64) 9px solid;
+}
+
+form .label{
+    align-self: end;
+
+}
+
+form .input{
+    text-align: left;
+}
+
+input{
+    width: 80%;
+}
+
+form #formbutton{
+    text-align: center;
+    align-self: center;
+}
+
+button#closeDialog{
+    background-color: rgb(87, 141, 62) !important;
+}
+#formbutton button{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(44, 141, 64);
+    background-color: rgb(44, 141, 64);
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    width: 100px;
+    margin-top:auto
+}
+
+.input select {
+    border: 1px solid rgba(62, 143, 78, 0.363);
+}
+.input select:focus {
+    border: 1px solid rgb(50, 148, 69);
+}
+
+.input input {
+    border: 1px solid rgba(62, 143, 78, 0.438);
+}
+.input input:focus {
+    border-color: rgb(44, 141, 64);
+    outline: none; 
 }

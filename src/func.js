@@ -19,32 +19,51 @@ function projectDialog() {
     const createForm = document.createElement("form");
 
     createForm.innerHTML = `
-    <div>
-    <label for="projectName">Project Name:</label>
+    <div id="title">
+      <h1>Create a Project</h1>
+    </div>
+
+    <div class="label">
+    <label for="projectName">Project Name: </label>
+    </div>
+
+    <div class="input">
     <input type="text" id="projectName" name="projectName" required>
     </div>
 
-    <div>
-    <label for=""type>Project Type</label>
-    <select id="projectType" name="projectType" required>
+    <div class="label">
+    <label for="projectType">Project Type: </label>
+    </div>
+
+    <div class="input">
+      <select id="projectType" name="projectType" required>
       <option value="web">Web Development</option>
       <option value="mobile">Mobile Development</option>
       <option value="data">Data Science</option>
     </select>
     </div>
 
-    <div>
-    <label for="ProjectDesc">Project Description:</label>
+    <div class="label">
+    <label for="ProjectDesc">Project Description: </label>
+    </div>
+        
+    <div class="input">
     <input type="text" id="ProjectDesc" name="ProjectDesc" required>
     </div>
 
-    <div>
+    <div class="label">
     <label for="githubLink">GitHub Link:</label>
-    <input type="url" id="githubLink" name="githubLink" required>
+    </div>
+        
+    <div class="input">
+    <input type="url" id="githubLink" name="githubLink">
+    </div>    
 
-    <button type="submit">Submit</button>
+    <div id="formbutton">
+    <button type="submit" id="submitDialog">Submit</button>
     <button type="button" id="closeDialog">Cancel</button>
     </div>
+    
   `;
 
     document.body.appendChild(createDialog)
