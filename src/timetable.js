@@ -3,11 +3,11 @@ const loadSchedule = () => {
 
     //REPLACE LATER WHEN U LEARN SUM DATABASE USER SHIT
     const scheduleData = {
-        Monday: ['', '', '', '', '', ''],
+        Monday: ['', 'lab', '', '', '', ''],
         Tuesday: ['Distrubuted Systems', 'Systems Ergonomics', '', '', '', ''],
         Wednesday: ['', ' Image Processing', '', 'Applied Informatics', 'PBL 5', ''],
-        Thursday: ['', 'History of Computing', '', '', '', ''],
-        Friday: ['', '', '', '', 'PBL5', '']    
+        Thursday: ['', 'History of Computing', '', 'lab', '', ''],
+        Friday: ['', 'lab', '', 'lab', 'PBL5', '']    
     };
 
     const scheduleContainer = document.createElement('div');
@@ -36,6 +36,9 @@ const loadSchedule = () => {
             Object.values(scheduleData).map(day => {
                 const cellValue = day[i];
                 let cellClass = cellValue === "" ? "taken" : "taken active";  
+                if (cellValue === "lab"){
+                    cellClass = "taken lab";
+                }
                 return `<td class="${cellClass}">${cellValue}</td>`;
             }).join('');
         
