@@ -8,7 +8,8 @@ Using - webpack
 - Dynamic tab changes (JS controlled)
 - Schedule page (schedule.js/css)
 - Updated project page
+- Form/dialog to add project card
 
 ### To be added:
-- Form/dialog to add project card
+
 - Home page
